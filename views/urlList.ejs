@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STOVE URL SHORTENER</title>
+  <link rel="stylesheet" type="text/css" href="../public/stylesheets/index.css">
+</head>
+<body>
+  <div id="home">
+    <nav>
+      <a id="nav_logo">
+        STOVE URL SHORTENER
+      </a>
+
+      <ul id="nav_menu_box">
+        <li>
+          <a class="nav_menu" href="http://localhost:3000">HOME</a>
+        </li>
+        <li>
+          <a class="nav_menu" href="http://localhost:3000/list">Shorten Url List</a>
+        </li>
+      </ul>
+    </nav>
+
+    <table>
+        <th>
+            ORIGIN URL
+        </th>
+        <th>
+            SHORTEN URL
+        </th>
+        <% urlList.forEach(function (el) { %>
+            <tr>
+                <td><a href="<%= el.origin_url %>"><%= el.origin_url %></a></td>
+                <td><a
+                        href="http://localhost:3000/<%= el.shorten_url %>">http://localhost:3000/<%= el.shorten_url %></a>
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+  </div>
+</body>
+</html>
