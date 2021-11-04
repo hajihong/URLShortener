@@ -50,8 +50,11 @@
 
 ## API
 - SUBMIT URL SHORT API
+<br>
 POST -> http://localhost:3000/result
 - GET URL LIST
+<br>
 GET -> http://localhost:3000/list
 - REDIRECT OF SHORTEN URL
+<br>
 GET -> http://localhost:3000/{shorten_url}
