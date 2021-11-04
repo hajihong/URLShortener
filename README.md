@@ -49,7 +49,7 @@
 - shorten_url 링크를 클릭 하거나 브라우저에 입력하면, DB column origin_url에 접근하여 redirect
 
 ## API
-- POST URL SHORT API :
+- POST URL SHORT :
 http://localhost:3000/result
 - GET URL LIST :
 http://localhost:3000/list
