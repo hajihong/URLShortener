@@ -20,6 +20,9 @@
 - Node.JS
 - Express
 
+#### Server
+- Ubuntu 18.04
+
 #### Database
 - MySQL
 - Knex.js
