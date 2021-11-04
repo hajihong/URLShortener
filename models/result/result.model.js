@@ -1,7 +1,7 @@
 const e = require('express');
 const knex = require('../knex');
 
-class ResultService {
+class ResultModel {
 
     // 특정 url 정보 조회
     static async readUrl(origin) {
@@ -54,4 +54,4 @@ class ResultService {
     };
 };
 
-module.exports = ResultService;
+module.exports = ResultModel;

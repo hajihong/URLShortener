@@ -1,6 +1,6 @@
 const knex = require('../knex');
 
-class ListService {
+class ListModel {
     static async readUrls(req, res) {
         try {
            const result = await knex.select().from('url');
@@ -12,4 +12,4 @@ class ListService {
     };
 };
 
-module.exports = ListService;
+module.exports = ListModel;

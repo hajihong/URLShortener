@@ -1,5 +1,5 @@
-const ResultService = require('../../services/result/result.service');
-const ListService = require('../../services/list/list.service');
+const ResultModel = require('../../models/result/result.model');
+const ListModel = require('../../models/list/list.model');
 const Base62 = require('../../modules/Base62');
 
 
@@ -7,14 +7,14 @@ const Base62 = require('../../modules/Base62');
 exports.postShortUrl = async (req, res, next) => {
     try {
         const originUrl = req.body.originUrl;
-        const result = await ResultService.readUrl(originUrl);
+        const result = await ResultModel.readUrl(originUrl);
 
         if(result.length > 0) {
             return res.render("index", { 
                 url : result[0].shorten_url,
                 message: 'SUCCESS!' });
         } else {
-            const num = await ResultService.postOriginUrl(originUrl);
+            const num = await ResultModel.postOriginUrl(originUrl);
             const shortUrl = await Base62.encodeToBase62(num);
             if (shortUrl.toString().length > 8 ) {
                 return res.render("index", {
@@ -22,10 +22,10 @@ exports.postShortUrl = async (req, res, next) => {
                     message: "Length of Short Url is over 8"
                 });
             } 
-            await ResultService.postShortUrl(num, shortUrl);
+            await ResultModel.postShortUrl(num, shortUrl);
             return res.render("index", { 
                 url : shortUrl,
-                message: null 
+                message: 'SUCCESS' 
             });
         }
     } catch (e) {
@@ -40,10 +40,10 @@ exports.postShortUrl = async (req, res, next) => {
 exports.redirectUrl = async (req, res) => {
     try {
         if(req.params.shortUrl == 'list') {
-            const urlList = await ListService.readUrls();
+            const urlList = await ListModel.readUrls();
             return res.render("urlList", { urlList : urlList });
         }
-        const result = await ResultService.readOriginUrl(req.params.shortUrl);
+        const result = await ResultModel.readOriginUrl(req.params.shortUrl);
         if (result === null) return res.render("error");
         return res.redirect(result[0].origin_url);
     } catch (e) {
