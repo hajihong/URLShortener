@@ -23,15 +23,20 @@
 #### Database
 - MySQL
 - Knex.js
+<img width="563" alt="스크린샷 2021-11-04 오후 1 23 05" src="https://user-images.githubusercontent.com/74098327/140257696-677dd0b6-b7e3-4340-bf5b-59eb457eb6e3.png">
 
 ## 🖥 화면
 #### 메인 화면
+<img width="1266" alt="스크린샷 2021-11-04 오후 1 23 54" src="https://user-images.githubusercontent.com/74098327/140257769-d59fea98-f2e5-4035-a53d-642019acaa15.png">
 
 #### 성공 화면
+<img width="1266" alt="스크린샷 2021-11-04 오후 1 24 22" src="https://user-images.githubusercontent.com/74098327/140257812-0488d954-4342-4abc-82cd-d01e1af1ad3f.png">
 
 #### URL 리스트 화면
+<img width="1255" alt="스크린샷 2021-11-04 오후 1 23 41" src="https://user-images.githubusercontent.com/74098327/140257751-c48c0986-66bb-46a4-a1a2-3d449e577968.png">
 
 #### 실패 화면
+<img width="1274" alt="스크린샷 2021-11-04 오후 1 23 28" src="https://user-images.githubusercontent.com/74098327/140257730-d19cf5f1-f4cb-4565-b0a4-1d4aae781206.png">
 
 <br>
 
