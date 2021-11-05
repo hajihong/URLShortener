@@ -58,3 +58,10 @@
 - AWS EC2 Ubuntu 18.04 생성
 - ftp-simple로 원격 서버 연동하여 개발
 - 링크 http://13.125.160.130:8080/
+
+<br>
+
+## 개선 사항
+- [ ] URL 유효성 검사(https or http가 없어도 true로 나오게)
+- [ ] DB에 origin_url 저장 시 http(s):// 제거
+- [ ] 리다이렉트 실패했을 때에 대한 에러 처리
