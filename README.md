@@ -19,6 +19,7 @@
 #### Backend
 - Node.JS
 - Express
+- MVC Pattern (Model: url 추가 및 shorten url 출력, View: EJS로 처리, Controller: 모델의 데이터를 가져와 뷰 ejs에 render) 
 
 #### Server
 - Ubuntu 18.04
@@ -51,5 +52,9 @@
 - PK 값인 AUTO_INCREMENT을 가져와서 Base62 encode 후 결과 값을 DB column shorten_url에 저장
 - shorten_url 링크를 클릭 하거나 브라우저에 입력하면, DB column origin_url에 접근하여 redirect
 
-## PAGE LINK
-http://13.125.160.130:8080/
+<br>
+
+## 서버 생성
+- AWS EC2 Ubuntu 18.04 생성
+- ftp-simple로 원격 서버 연동하여 개발
+- 링크 http://13.125.160.130:8080/
